@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC0050102776095600CA0583 /* Unicolor.docc in Sources */ = {isa = PBXBuildFile; fileRef = BC00500F2776095600CA0583 /* Unicolor.docc */; };
 		BC0050162776095600CA0583 /* Unicolor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC00500B2776095600CA0583 /* Unicolor.framework */; };
 		BC00501B2776095600CA0583 /* UnicolorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00501A2776095600CA0583 /* UnicolorTests.swift */; };
-		BC00501C2776095600CA0583 /* Unicolor.h in Headers */ = {isa = PBXBuildFile; fileRef = BC00500E2776095600CA0583 /* Unicolor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC005031277615FB00CA0583 /* UniColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC005028277615FB00CA0583 /* UniColor.swift */; };
+		BC005032277615FB00CA0583 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC005029277615FB00CA0583 /* Utilities.swift */; };
+		BC005033277615FB00CA0583 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502A277615FB00CA0583 /* Palette.swift */; };
+		BC005034277615FB00CA0583 /* CGColor+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502B277615FB00CA0583 /* CGColor+Extras.swift */; };
+		BC005035277615FB00CA0583 /* Barycenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502C277615FB00CA0583 /* Barycenter.swift */; };
+		BC005036277615FB00CA0583 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502D277615FB00CA0583 /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +29,17 @@
 
 /* Begin PBXFileReference section */
 		BC00500B2776095600CA0583 /* Unicolor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicolor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC00500E2776095600CA0583 /* Unicolor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unicolor.h; sourceTree = "<group>"; };
-		BC00500F2776095600CA0583 /* Unicolor.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Unicolor.docc; sourceTree = "<group>"; };
 		BC0050152776095600CA0583 /* UnicolorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicolorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC00501A2776095600CA0583 /* UnicolorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicolorTests.swift; sourceTree = "<group>"; };
+		BC005025277615FB00CA0583 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		BC005028277615FB00CA0583 /* UniColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniColor.swift; sourceTree = "<group>"; };
+		BC005029277615FB00CA0583 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BC00502A277615FB00CA0583 /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		BC00502B277615FB00CA0583 /* CGColor+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+Extras.swift"; sourceTree = "<group>"; };
+		BC00502C277615FB00CA0583 /* Barycenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barycenter.swift; sourceTree = "<group>"; };
+		BC00502D277615FB00CA0583 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		BC00502E277615FB00CA0583 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BC00502F277615FB00CA0583 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +64,10 @@
 		BC0050012776095600CA0583 = {
 			isa = PBXGroup;
 			children = (
-				BC00500D2776095600CA0583 /* Unicolor */,
+				BC00502E277615FB00CA0583 /* LICENSE */,
+				BC005025277615FB00CA0583 /* Package.swift */,
+				BC00502F277615FB00CA0583 /* README.md */,
+				BC005026277615FB00CA0583 /* Sources */,
 				BC0050192776095600CA0583 /* UnicolorTests */,
 				BC00500C2776095600CA0583 /* Products */,
 			);
@@ -68,21 +82,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC00500D2776095600CA0583 /* Unicolor */ = {
-			isa = PBXGroup;
-			children = (
-				BC00500E2776095600CA0583 /* Unicolor.h */,
-				BC00500F2776095600CA0583 /* Unicolor.docc */,
-			);
-			path = Unicolor;
-			sourceTree = "<group>";
-		};
 		BC0050192776095600CA0583 /* UnicolorTests */ = {
 			isa = PBXGroup;
 			children = (
 				BC00501A2776095600CA0583 /* UnicolorTests.swift */,
 			);
 			path = UnicolorTests;
+			sourceTree = "<group>";
+		};
+		BC005026277615FB00CA0583 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BC005027277615FB00CA0583 /* UniColor */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BC005027277615FB00CA0583 /* UniColor */ = {
+			isa = PBXGroup;
+			children = (
+				BC005028277615FB00CA0583 /* UniColor.swift */,
+				BC005029277615FB00CA0583 /* Utilities.swift */,
+				BC00502A277615FB00CA0583 /* Palette.swift */,
+				BC00502B277615FB00CA0583 /* CGColor+Extras.swift */,
+				BC00502C277615FB00CA0583 /* Barycenter.swift */,
+				BC00502D277615FB00CA0583 /* Operators.swift */,
+			);
+			path = UniColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,7 +118,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC00501C2776095600CA0583 /* Unicolor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +172,7 @@
 				TargetAttributes = {
 					BC00500A2776095600CA0583 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					BC0050142776095600CA0583 = {
 						CreatedOnToolsVersion = 13.1;
@@ -194,7 +220,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC0050102776095600CA0583 /* Unicolor.docc in Sources */,
+				BC005032277615FB00CA0583 /* Utilities.swift in Sources */,
+				BC005031277615FB00CA0583 /* UniColor.swift in Sources */,
+				BC005036277615FB00CA0583 /* Operators.swift in Sources */,
+				BC005035277615FB00CA0583 /* Barycenter.swift in Sources */,
+				BC005034277615FB00CA0583 /* CGColor+Extras.swift in Sources */,
+				BC005033277615FB00CA0583 /* Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +373,7 @@
 		BC0050202776095600CA0583 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -362,6 +394,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,6 +403,7 @@
 		BC0050212776095600CA0583 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -398,6 +432,7 @@
 		BC0050232776095600CA0583 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VMXFN634RR;
@@ -419,6 +454,7 @@
 		BC0050242776095600CA0583 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VMXFN634RR;

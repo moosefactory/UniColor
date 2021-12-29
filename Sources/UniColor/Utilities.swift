@@ -9,6 +9,7 @@
 // Utilities.swift - Created by Tristan Leblanc on 19/12/2021.
 
 import Foundation
+import CoreGraphics
 
 extension NumberFormatter {
     

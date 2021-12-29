@@ -9,6 +9,7 @@
 // UniColor+Barycenter.swift - Created by Tristan Leblanc on 23/12/2021.
 
 import Foundation
+import CoreGraphics
 
 public extension UniColor {
     

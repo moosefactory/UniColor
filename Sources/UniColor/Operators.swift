@@ -9,6 +9,7 @@
 // Operators.swift - Created by Tristan Leblanc on 25/11/2020.
 
 import Foundation
+import CoreGraphics
 
 // MARK: - UniColor Operators Extension -
 

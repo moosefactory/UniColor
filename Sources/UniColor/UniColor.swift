@@ -29,7 +29,7 @@ public typealias HSLATuple = (h: CGFloat, s: CGFloat, l: CGFloat, a: CGFloat)
 public typealias HSBATuple = (h: CGFloat, s: CGFloat, b: CGFloat, a: CGFloat)
 public typealias RGBATuple = (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)
 
-public struct UniColor: Codable {
+public struct UniColor: Codable, Equatable {
     
     /// Components
     
@@ -88,6 +88,13 @@ public struct UniColor: Codable {
     
     public func with(alpha: CGFloat) -> UniColor {
         return UniColor(red: r, green: g, blue: b, alpha: a)
+    }
+    
+    static func == (lhs: UniColor, rhs: UniColor) {
+        if lhs.r != rhs.r { return }
+        if lhs.g != rhs.g { return }
+        if lhs.b != rhs.b { return }
+        if lhs.a != rhs.a { return }
     }
 }
 
@@ -164,13 +171,17 @@ public extension UniColor {
         return hsba
     }
     
+    
+    func opacity(_ value: CGFloat) -> UniColor {
+        UniColor(red: r, green: g, blue: b, alpha: value)
+    }
+
     func with(brightnessFactor: CGFloat) -> UniColor {
         var hsla = self.hsla
         hsla.l = max(min(hsla.l * brightnessFactor, 1),0)
         return PlatformColor(hsla: hsla).color
     }
-    
-    
+        
     var darken: UniColor {
         return with(brightnessFactor: 0.50)
     }
