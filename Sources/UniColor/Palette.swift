@@ -34,8 +34,9 @@ public extension UniColor {
     static let mint = UniColor(hexString: "#84E5E2")
     static let brown = UniColor(hexString: "#A88D66")
     
-    static let darkGray = UniColor(hexString: "#343434")
-    static let lightGray = UniColor(hexString: "#B4B4B4")
+    static let gray = gray_50_percent
+    static let darkGray = gray_70_percent
+    static let lightGray = gray_30_percent
     
     // Grays with percent of black
     
