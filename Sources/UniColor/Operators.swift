@@ -61,3 +61,26 @@ public extension UniColor {
         return UniColor(red: lhs.r * rhs, green: lhs.g * rhs, blue: lhs.b * rhs, alpha: lhs.a * rhs)
     }
 }
+
+//MARK: - barycentre - Compute a color between to given colors -
+
+public extension UniColor {
+    
+    static func barycentre(_ color1: UniColor, _ color2: UniColor, fraction: CGFloat = 0.5) -> UniColor {
+        
+        return UniColor(red: color1.r.barycentre(to: color2.r, fraction: fraction),
+                        green: color1.g.barycentre(to: color2.g, fraction: fraction),
+                        blue: color1.b.barycentre(to: color2.b, fraction: fraction),
+                        alpha: color1.a.barycentre(to: color2.a, fraction: fraction))
+    }
+    
+}
+
+extension CGFloat {
+    
+    @_transparent
+    func barycentre(to: CGFloat, fraction: CGFloat = 0.5) -> CGFloat {
+        let f = fraction.clampToPositiveFractional
+        return self * (1 - f) + to * f
+    }
+}

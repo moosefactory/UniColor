@@ -13,7 +13,6 @@
 		BC005032277615FB00CA0583 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC005029277615FB00CA0583 /* Utilities.swift */; };
 		BC005033277615FB00CA0583 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502A277615FB00CA0583 /* Palette.swift */; };
 		BC005034277615FB00CA0583 /* CGColor+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502B277615FB00CA0583 /* CGColor+Extras.swift */; };
-		BC005035277615FB00CA0583 /* Barycenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502C277615FB00CA0583 /* Barycenter.swift */; };
 		BC005036277615FB00CA0583 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00502D277615FB00CA0583 /* Operators.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +35,10 @@
 		BC005029277615FB00CA0583 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BC00502A277615FB00CA0583 /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		BC00502B277615FB00CA0583 /* CGColor+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+Extras.swift"; sourceTree = "<group>"; };
-		BC00502C277615FB00CA0583 /* Barycenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barycenter.swift; sourceTree = "<group>"; };
 		BC00502D277615FB00CA0583 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		BC00502E277615FB00CA0583 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BC00502F277615FB00CA0583 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BCDF79622799E6C20097E168 /* UniColor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UniColor.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				BC00502E277615FB00CA0583 /* LICENSE */,
+				BCDF79622799E6C20097E168 /* UniColor.podspec */,
 				BC005025277615FB00CA0583 /* Package.swift */,
 				BC00502F277615FB00CA0583 /* README.md */,
 				BC005026277615FB00CA0583 /* Sources */,
@@ -105,7 +105,6 @@
 				BC005029277615FB00CA0583 /* Utilities.swift */,
 				BC00502A277615FB00CA0583 /* Palette.swift */,
 				BC00502B277615FB00CA0583 /* CGColor+Extras.swift */,
-				BC00502C277615FB00CA0583 /* Barycenter.swift */,
 				BC00502D277615FB00CA0583 /* Operators.swift */,
 			);
 			path = UniColor;
@@ -223,7 +222,6 @@
 				BC005032277615FB00CA0583 /* Utilities.swift in Sources */,
 				BC005031277615FB00CA0583 /* UniColor.swift in Sources */,
 				BC005036277615FB00CA0583 /* Operators.swift in Sources */,
-				BC005035277615FB00CA0583 /* Barycenter.swift in Sources */,
 				BC005034277615FB00CA0583 /* CGColor+Extras.swift in Sources */,
 				BC005033277615FB00CA0583 /* Palette.swift in Sources */,
 			);
