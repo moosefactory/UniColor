@@ -128,7 +128,7 @@ public extension PlatformColor {
     }
 }
 
-extension UniColor {
+public extension UniColor {
     
     init(hsla: HSLATuple) {
         let platformColor = PlatformColor(hsla: hsla)
