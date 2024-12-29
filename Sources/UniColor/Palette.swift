@@ -10,15 +10,58 @@
 // Palette.swift - Created by Tristan Leblanc on 23/12/2021.
 
 import Foundation
+#if os(macOS)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 public extension UniColor {
     
     static let clear = UniColor(hexString: "#00000000")
     
+    struct System {
+        
+    #if os(macOS)
+        
+        public static let control = UniColor(NSColor.controlColor)
+        public static let controlText = UniColor(NSColor.controlTextColor)
+        public static let selectedControlText = UniColor(NSColor.selectedControlTextColor)
+        public static let controlsBackground = UniColor(NSColor.controlBackgroundColor)
+
+        public static let text = UniColor(NSColor.textColor)
+
+        public static let clear = UniColor(NSColor.clear)
+        
+        public static let black = UniColor(NSColor.black)
+        public static let darkGray = UniColor(NSColor.darkGray)
+        public static let lightGray = UniColor(NSColor.lightGray)
+        public static let white = UniColor(NSColor.white)
+
+        public static let red = UniColor(NSColor.systemRed)
+        public static let blue = UniColor(NSColor.systemBlue)
+        public static let gray = UniColor(NSColor.systemGray)
+        public static let mint = UniColor(NSColor.systemMint)
+        public static let pink = UniColor(NSColor.systemPink)
+        public static let teal = UniColor(NSColor.systemTeal)
+        public static let brown = UniColor(NSColor.systemBrown)
+        public static let green = UniColor(NSColor.systemGreen)
+        public static let indigo = UniColor(NSColor.systemIndigo)
+        public static let orange = UniColor(NSColor.systemOrange)
+        public static let purple = UniColor(NSColor.systemPurple)
+        public static let yellow = UniColor(NSColor.systemYellow)
+        
+
+        @available(macOS 12.0, *)
+        public static let cyan = UniColor(NSColor.systemCyan)
+
+    #endif
+    }
+    
     static let black = UniColor(hexString: "#000000")
     static let white = UniColor(hexString: "#FFFFFF")
     
-    // red, green, blue - This is why UniCOlor components are named r,g,b ;)
+    // Components
     
     static let red = UniColor(hexString: "#EE4836")
     static let green = UniColor(hexString: "#66D53F")

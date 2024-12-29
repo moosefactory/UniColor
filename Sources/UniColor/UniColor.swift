@@ -45,6 +45,15 @@ public struct UniColor: Codable, Equatable {
         self.a = 1
     }
     
+#if os(macOS)
+    public init(_ nsColor: NSColor) {
+        self.init(nsColor.cgColor)
+    }
+#else
+    public init(_ uiColor: UIColor) {
+        self.init(uiColor.cgColor)
+    }
+#endif
     public init(_ cgColor: CGColor) {
         let c = cgColor.components
         let n = cgColor.numberOfComponents

@@ -70,6 +70,7 @@ public extension CGColor {
     /// init(hsla: HSLATuple)
     ///
     /// Init with Red/Green/Blue/Alpha values
+    @available(iOS 13.0, *)
     static func make(with rgba: RGBATuple) -> CGColor {
         CGColor(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
     }
