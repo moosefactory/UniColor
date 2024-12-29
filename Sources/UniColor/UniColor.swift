@@ -54,6 +54,7 @@ public struct UniColor: Codable, Equatable {
         self.init(uiColor.cgColor)
     }
 #endif
+    
     public init(_ cgColor: CGColor) {
         let c = cgColor.components
         let n = cgColor.numberOfComponents
