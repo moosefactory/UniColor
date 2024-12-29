@@ -23,9 +23,13 @@ public extension UniColor {
     struct System {
     #if os(macOS)
         
-        public static let controls = UniColor(NSColor.controlColor)
+        public static let control = UniColor(NSColor.controlColor)
+        public static let controlText = UniColor(NSColor.controlTextColor)
+        public static let selectedControlText = UniColor(NSColor.selectedControlTextColor)
         public static let controlsBackground = UniColor(NSColor.controlBackgroundColor)
-        
+
+        public static let text = UniColor(NSColor.textColor)
+
         public static let clear = UniColor(NSColor.clear)
         
         public static let black = UniColor(NSColor.black)
