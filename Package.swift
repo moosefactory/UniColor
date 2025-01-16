@@ -21,7 +21,7 @@ let package = Package(
             targets: ["UniColor"]),
     ],
     dependencies: [
-        .package(path: "../MFFoundation"),
+        .package(url: "https://github.com/moosefactory/MFFoundation.git", .upToNextMajor(from: "2.0.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
