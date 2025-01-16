@@ -1,15 +1,17 @@
-//
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory UniColor Framework - v1.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2020 Tristan Leblanc                     */
-/*        (oo)             tristan@moosefactory.eu                          */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
-
-// Palette.swift - Created by Tristan Leblanc on 23/12/2021.
+//   /\/\__/\/\      MFUnicolor
+//   \/\/..\/\/      Color Management Swift Framework - v2.0
+//      (oo)
+//  MooseFactory
+//    Software       ©2007-2025 - Moose
+//  ------------------------------------------
+//  􀈿 Palette.swift
+//  􀐚 MFUnicolor
+//  􀓣 Created by Tristan Leblanc on 23/12/2021.
 
 import Foundation
+// For hexString initialisation
+import MFFoundation
+
 #if os(macOS)
     import AppKit
 #else

@@ -1,12 +1,12 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory UniColor Framework - v1.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2020 Tristan Leblanc                     */
-/*        (oo)             tristan@moosefactory.eu                          */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
-
-//  UniColor.swift - Created by Tristan Leblanc on 25/11/2020.
+//   /\/\__/\/\      MFUnicolor
+//   \/\/..\/\/      Color Management Swift Framework - v2.0
+//      (oo)
+//  MooseFactory
+//    Software       ©2007-2025 - Moose
+//  ------------------------------------------
+//  􀈿 UniColor.swift
+//  􀐚 MFUnicolor
+//  􀓣 Created by Tristan Leblanc on 25/11/2020.
 
 
 #if !os(watchOS)
@@ -29,6 +29,8 @@ public typealias HSLATuple = (h: CGFloat, s: CGFloat, l: CGFloat, a: CGFloat)
 public typealias HSBATuple = (h: CGFloat, s: CGFloat, b: CGFloat, a: CGFloat)
 public typealias RGBATuple = (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)
 
+// MARK: - Unicolor Structure
+
 public struct UniColor: Codable, Equatable {
     
     /// Components
@@ -45,6 +47,8 @@ public struct UniColor: Codable, Equatable {
         self.a = 1
     }
     
+    // MARK: Initialisation
+    
 #if os(macOS)
     public init(_ nsColor: NSColor) {
         self.init(nsColor.cgColor)
@@ -60,25 +64,25 @@ public struct UniColor: Codable, Equatable {
         let n = cgColor.numberOfComponents
         switch n {
         case 1:
-            self.r = c?[0] ?? 0
-            self.g = c?[0] ?? 0
-            self.b = c?[0] ?? 0
-            self.a = 1
+            r = c?[0] ?? 0
+            g = c?[0] ?? 0
+            b = c?[0] ?? 0
+            a = 1
         case 3:
-            self.r = c?[0] ?? 0
-            self.g = c?[1] ?? 0
-            self.b = c?[2] ?? 0
-            self.a = 1
+            r = c?[0] ?? 0
+            g = c?[1] ?? 0
+            b = c?[2] ?? 0
+            a = 1
         case 4:
-            self.r = c?[0] ?? 0
-            self.g = c?[1] ?? 0
-            self.b = c?[2] ?? 0
-            self.a = c?[3] ?? 1
+            r = c?[0] ?? 0
+            g = c?[1] ?? 0
+            b = c?[2] ?? 0
+            a = c?[3] ?? 1
         default:
-            self.r = 0
-            self.g = 0
-            self.b = 0
-            self.a = 1
+            r = 0
+            g = 0
+            b = 0
+            a = 1
         }
     }
     
@@ -181,7 +185,6 @@ public extension UniColor {
         return hsba
     }
     
-    
     func opacity(_ value: CGFloat) -> UniColor {
         UniColor(red: r, green: g, blue: b, alpha: value)
     }
@@ -206,6 +209,7 @@ public extension UniColor {
         return brightness < 0.35 ? .white : .black
     }
 }
+
 
 // MARK: - Color/Hex Conversion
 
@@ -233,7 +237,7 @@ public extension UniColor {
     
 }
 
-// MARK: - SwiftUI
+// MARK: - SwiftUI Color Conversion
 
 public extension UniColor {
     

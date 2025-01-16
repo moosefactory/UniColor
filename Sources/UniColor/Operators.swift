@@ -1,12 +1,12 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory UniColor Framework - v1.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2020 Tristan Leblanc                     */
-/*        (oo)             tristan@moosefactory.eu                          */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
-
-// Operators.swift - Created by Tristan Leblanc on 25/11/2020.
+//   /\/\__/\/\      MFUnicolor
+//   \/\/..\/\/      Color Management Swift Framework - v2.0
+//      (oo)
+//  MooseFactory
+//    Software       ©2007-2025 - Moose
+//  ------------------------------------------
+//  􀈿 Operators.swift
+//  􀐚 MFUnicolor
+//  􀓣 Created by Tristan Leblanc on 25/11/2020.
 
 import Foundation
 import CoreGraphics

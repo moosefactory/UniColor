@@ -1,12 +1,12 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - v2.0                   */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2020 Tristan Leblanc                     */
-/*        (oo)             tristan@moosefactory.eu                          */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
-
-// NSColor+Extras.swift - Created by Tristan Leblanc on 27/04/2020.
+//   /\/\__/\/\      MFUnicolor
+//   \/\/..\/\/      Color Management Swift Framework - v2.0
+//      (oo)
+//  MooseFactory
+//    Software       ©2007-2025 - Moose
+//  ------------------------------------------
+//  􀈿 CGColor+Extras.swift
+//  􀐚 MFUnicolor
+//  􀓣 Created by Tristan Leblanc on 27/04/2020.
 
 #if !os(watchOS)
 
@@ -30,7 +30,6 @@ public extension CGColor {
     var hsla: HSLATuple {
         return color.hsla
     }
-    
     
     /// rgba
     ///
