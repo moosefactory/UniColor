@@ -246,10 +246,12 @@ public extension UniColor {
     @inlinable var green: CGFloat { g }
     @inlinable var blue: CGFloat { b }
 
+#if !os(tvOS)
     @available(iOS 14.0, *)
     var suiColor: SwiftUI.Color {
         return SwiftUI.Color(cgColor)
     }
+#endif
     
 }
 
