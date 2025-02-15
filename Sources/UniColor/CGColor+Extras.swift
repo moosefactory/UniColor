@@ -138,19 +138,17 @@ public extension UniColor {
     var platformColor: PlatformColor {
         PlatformColor(red: r, green: g, blue: b, alpha: a)
     }
-}
 
 // MARK: - Color/Hex Conversion
 
-public extension PlatformColor {
     
-    convenience init(hexString: String, alpha: CGFloat = 1.0) {
-        self.init(color: UniColor(hexString: hexString))
-    }
-    
-    var hex: String {
-        return color.hex
-    }
+//    init(hexString: String, alpha: CGFloat = 1.0) {
+//        self.init(PlatformColor(hexString: hexString))
+//    }
+//    
+//    var hex: String {
+//        return color.hex
+//    }
 }
 
 #endif
